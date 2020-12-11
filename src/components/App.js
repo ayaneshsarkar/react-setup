@@ -31,8 +31,6 @@ class App extends Component {
       desc: "I'm very happy that my webpack config works. I got clicked ✔.",
       inputValue: ''
     });
-
-    console.log(e.target);
   }
 
   handleChange = (e) => {
