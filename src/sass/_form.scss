@@ -1,0 +1,9 @@
+.form-control {
+  border-radius: 0 !important;
+  
+  &:focus {
+    outline: none;
+    box-shadow: none !important;
+    border-color: $primary !important;
+  }
+}

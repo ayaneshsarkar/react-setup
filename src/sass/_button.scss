@@ -1,0 +1,12 @@
+.btn {
+  &:focus {
+    outline: none;
+    box-shadow: none !important;
+  }
+
+  &-primary {
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+}
