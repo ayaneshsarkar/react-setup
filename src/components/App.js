@@ -47,17 +47,17 @@ class App extends Component {
     });
   }
 
-  findUser = (index) => {
+  findUser = (id) => {
     const users = [...this.state.users];
-    const userIndex = users.findIndex(user => user.id === index);
+    const userIndex = users.findIndex(user => user.id === id);
     const user = users[userIndex];
 
     console.log(user.name);
   }
 
-  updateUser = (e, index) => {
+  updateUser = (e, id) => {
     const users = [...this.state.users];
-    const userIndex = users.findIndex(user => user.id === index);
+    const userIndex = users.findIndex(user => user.id === id);
     const user = users[userIndex];
 
     user.name = e.target.value;
@@ -66,9 +66,7 @@ class App extends Component {
 
   deleteUser = (index) => {
     const users = [...this.state.users];
-    const userIndex = users.findIndex(user => user.id === index);
-    const user = users[userIndex];
-    user.name = null;
+    users.splice(index, 1);
 
     this.setState({ users });
   }

@@ -5,10 +5,10 @@ const UserList = ({ user, deleteUser, findUser, updateUser, index, value }) => {
     <li key={user.id} class="list-group-item">
       <div className="d-flex align-items-center justify-content-between">
         <div className="m-0">
-          <span onClick={() => findUser(index + 1)} className="m-0 pointer">{user.name}</span><br />
+          <span onClick={() => findUser(user.id)} className="m-0 pointer">{user.name}</span><br />
           <div className="form-group">
             <input 
-              onChange={(e) => updateUser(e, index + 1)} 
+              onChange={(e) => updateUser(e, user.id)} 
               type="text" 
               className="form-control mt-2" 
               defaultValue={value}
@@ -16,7 +16,7 @@ const UserList = ({ user, deleteUser, findUser, updateUser, index, value }) => {
           </div>
         </div>
 
-        <p onClick={() => deleteUser(index + 1)} className="bg-danger text-white linkable">
+        <p onClick={() => deleteUser(index)} className="bg-danger text-white linkable">
           Delete
         </p>
       </div>

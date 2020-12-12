@@ -6,7 +6,7 @@ const Users = ({ allUsers, deleteUser, findUser, updateUser, value }) => {
     <ul class="list-group mb-5">
       { 
         allUsers.map((user, index) => {
-          if(user && user.name) {
+          if(user) {
             return (
               <UserList 
                 user={user} 
