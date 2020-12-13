@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 import {jsonTypeicodeUri} from './components/api';
 import Jumbotron from './components/Jumbotron';
 import Form from './components/form/Form';
 import Users from './components/users/Users';
-import axios from 'axios';
 
 class App extends Component {
 
@@ -11,7 +11,7 @@ class App extends Component {
     title: 'Hello Webpack!',
     desc: "I'm very happy that my webpack config works. It feels absolutely amazing.",
     inputValue: null,
-    showDesc: true,
+    showJumbo: true,
     users: []
   }
 
@@ -43,7 +43,7 @@ class App extends Component {
     e.preventDefault();
 
     this.setState({
-      showDesc: !this.state.showDesc
+      showJumbo: !this.state.showJumbo
     });
   }
 
@@ -76,7 +76,7 @@ class App extends Component {
   render() {
     let jumboBox = null;
 
-    if(this.state.showDesc) {
+    if(this.state.showJumbo) {
       jumboBox = (
         <Jumbotron title={this.state.title} desc={this.state.desc} handleClick={this.handleClick} />
       );

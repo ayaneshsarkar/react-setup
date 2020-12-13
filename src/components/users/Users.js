@@ -4,23 +4,17 @@ import UserList from './UserList';
 const Users = ({ allUsers, deleteUser, findUser, updateUser, value }) => {
   return (
     <ul class="list-group mb-5">
-      { 
-        allUsers.map((user, index) => {
-          if(user) {
-            return (
-              <UserList 
-                user={user} 
-                deleteUser={deleteUser} 
-                findUser={findUser} 
-                updateUser={updateUser}
-                index={index} 
-                value={value} 
-              />
-            );
-          }
-        }
-        
-      )}
+      { allUsers ? 
+        allUsers.map((user, index) => 
+        <UserList 
+          user={user} 
+          deleteUser={deleteUser} 
+          findUser={findUser} 
+          updateUser={updateUser}
+          index={index} 
+          value={value} 
+        />) : null 
+      }
     </ul>
   )
 }
