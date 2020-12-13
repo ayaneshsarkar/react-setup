@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {jsonTypeicodeUri} from './api';
-import Jumbotron from './Jumbotron';
-import Form from './form/Form';
-import Users from './users/Users';
+import {jsonTypeicodeUri} from './components/api';
+import Jumbotron from './components/Jumbotron';
+import Form from './components/form/Form';
+import Users from './components/users/Users';
 import axios from 'axios';
 
 class App extends Component {
